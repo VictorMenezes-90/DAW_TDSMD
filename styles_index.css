@@ -64,10 +64,10 @@ header h1, header p{
 }
 
 .CSS_Button .Button_Header{
-  background-image: linear-gradient(-45deg, var(--CSS-Blue) 0%, var(--CSS-Cyan));
+  background-image: linear-gradient(-45deg, var(--CSS-Cyan) 0%, var(--CSS-Blue));
 }
 .CSS_Button .Footer_Title{
-  background-image: linear-gradient(-45deg, var(--CSS-Blue) 0%, var(--CSS-Cyan));
+  background-image: linear-gradient(-45deg, var(--CSS-Cyan) 0%, var(--CSS-Blue));
   background-clip: text;
 }
 
@@ -116,11 +116,14 @@ header h1, header p{
 }
 
 .Button_Header {
+  display: flex;
+  justify-content: center;
   height: 180px;
   position: relative;
 }
 .Header_Logo {
-    width: 100%;
+    margin: auto;
+    width: auto;
     height: 100%;
 }
 
