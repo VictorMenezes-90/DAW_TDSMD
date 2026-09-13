@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Horizonte</title>
+        <link rel="icon" href="horizonte.png" sizes="32x32" type="image/png">
+        <style>
+
+            .Video{
+                width: 30%; 
+                border-radius: 30px; 
+                border-color: darkmagenta; 
+                border-style: solid; 
+                border-width: 5px;
+                }
+
+            .Imagem{
+                width: 30%;
+                border-style: solid;
+                border-radius: 30px;
+                border-color: blue;
+                border-width: 5px;}
+
+            .Legenda{
+                width: 30%;
+                border-left-width: 3px;
+                border-left-style: solid;
+                border-left-color: blue;
+                margin-left: 0.5%;
+            }
+
+        </style>
+        <link rel="stylesheet" type="text/css" href="../../styles_floating.css">
+    </head>
+    <body>
+        <div class="ignore-css">
+            <a href="../../index.html" title="Link para o Menu inicial">Multimídia I</a>
+        </div>
+        <!-- 
+        Comandos:
+         
+        img scr="Imagem, preferencialmente na mesma pasta ou subpasta" 
+        title/alt -> texto guia p/ imagem
+        width (scale)
+        height (px)
+        figcaption (Legenda)
+
+        -->
+
+        <h1 align="center">Pôr do Sol</h1>
+
+        <img class="Imagem" src="Arquivos/avifruim.avif" 
+                title="Horizonte pixelado"
+                alt="Pôr do Sol Pixelado"
+                name="PorDoSol"
+                id="PorDoSol">
+
+        <figcaption class="Legenda"><small style="margin-left: 15px;">Pôr do Sol Pixelado</small><br><small style="margin-left: 15px;">Autor: desconhecido (não me processe)</small></figcaption>
+
+        <br>
+
+        <video class="Video" controls preload="metadata" poster="Arquivos/Scooby-Doo.webp"><source src="Arquivos/video.mp4" type="video/mp4"></video>
+        <br>
+        <audio controls muted><source src="Arquivos/Hip Hop Sem Direitos Autorais (No Copyright).mp3" type="audio/mpeg"></audio>
+        <br>
+        <h1> Casa do Kim Jon Un</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3095
+        .5662879457122!2d125.80328191220981!3d39.11634337156004!2m3!1f0!2f0!3f0
+        !3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fd5f0acbfc86577%3A0x3c6162a7cb525
+        159!2sRyongsong%20Residence%2C%20Pyongyang%2C%20Coreia%20do%20Norte!5e0
+        !3m2!1spt-BR!2sbr!4v1778089418439!5m2!1spt-BR!2sbr" 
+        style="border:0; width: 100%; height: auto;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    
+    </body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Uniclínica - Cadastro</title>
+
+        <style>
+            .MenuContainer{
+                width: 100%;
+            }
+
+            .MenuLink{
+                border-style: solid;
+                border-width: 2.5px;
+                border-color: rgba(0,0,0,0);
+                border-top-color: rgba(200,200,200,1);
+                border-bottom-color: rgba(200,200,200,1);
+            }
+
+            .BodyContainer{
+                width: 100%;
+                height: 100%;
+            }
+
+            a{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="MenuContainer">
+            <div class="MenuLink">
+                <a href="principal.html">Voltar</a>
+            </div>
+        </div>
+
+        <div class="BodyContainer">
+        <h1>CLINICA VETERINÁRIA UNICLÍNICA - CADASTRO </h1>
+        <p>Cadastre seu PET para agilizar seu atendimento!</p>
+
+        <form>
+            <legend>👀 Nome do Animal 👀</legend>
+            <input type="text" 
+                    id="NomeAnimal"
+                    name="NomeAnimal"
+                    required           
+                    placeholder="Ex.: Louro José"
+                    style="width: 300px;">
+            <br><br>
+            <legend>Sexo</legend>
+            ♀️ F<input type="radio"
+                    id="SexoAnimal"
+                    name="SexoAnimal"        
+                    value="F"
+                    checked>
+
+            <input type="radio"
+                    id="SexoAnimal"
+                    name="SexoAnimal"        
+                    value="M">M ♂️
+            <br><br>
+
+            🐶 Espécie 🐠
+            <br>
+            <select 
+                    id="Especie" 
+                    name="Especie" 
+                    style="width: 300px;" 
+                    required>
+                <optgroup>
+                        <legend>
+                            Seleção de Espécie
+                        </legend>
+                        <option>
+                            ----------
+                        </option>
+                </optgroup>
+                <optgroup>
+                    <legend>Doméstica</legend>
+                    <option value="Gato">Gato</option>
+                    <option value="Cachorro">Cachorro</option>
+                    <option value="Hamster">Hamster</option>
+                    <option value="Papagaio">Papagaio</option>
+                    <option value="Peixe">Peixe</option>
+                </optgroup>
+                <optgroup>
+                    <legend>Exótica</legend>
+                    <option value="Arara">Arara</option>
+                    <option value="Jacare">Jacaré</option>
+                    <option value="Cobra">Cobra</option>
+                </optgroup>
+            </select>
+            <br><br>
+            <legend>🗓️ Idade 🗓️</legend>
+            <input type="number" 
+                    id="IdadeAnimal"
+                    name="IdadeAnimal"
+                    required
+                    min="0"
+                    max="200"           
+                    placeholder="Ex.: 15"
+                    style="width: 300px;">
+            <br><br>
+
+            <legend>🤔 Observações e Extras 🤔</legend>
+            <textarea style="width: 500px; height: 100px;" placeholder="Digite aqui especificações, cuidados ou outras informações que podem ser úteis para o conforto de seu animal! Agradecemos desde já a preferencia!"></textarea>
+            <br><br>
+
+            <input type="submit" value="🐾 Cadastrar 🐾">
+        </form>
+        </div>
+
+    </body>
+</html>

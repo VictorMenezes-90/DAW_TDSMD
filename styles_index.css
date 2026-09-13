@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --HTML-Orange: #ff6b00;
+  --HTML-Red: #f00;
+
+  --CSS-Blue:#00f;
+  --CSS-Cyan:#0af;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: linear-gradient(-45deg, #aaa, #fff);
+  background-attachment: fixed;
+}
+
+header{
+    margin-bottom: 10px;
+    padding: 10px;
+
+    background-image: linear-gradient(15deg, rgb(0, 0, 0), rgb(50, 50, 50));
+    color: #fff;
+}
+
+header a{
+    text-decoration: none;
+    color: #fff;
+
+    border-radius: 25px;
+    padding: 5px;
+
+    transition: 0.25s ease;
+}
+
+header a:hover{
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0px 0px 10px #fff;
+}
+
+header h1, header p{
+    padding: 5px;
+
+    width: 100%;
+    text-align: center;
+}
+
+.HTML_Button .Button_Header{
+    background-image: linear-gradient(-45deg, var(--HTML-Orange) 0%, var(--HTML-Red));
+}
+.HTML_Button .Footer_Title{
+    background-image: linear-gradient(-45deg, var(--HTML-Orange) 0%, var(--HTML-Red));
+    background-clip: text;
+
+    /*Gambiarra pra deixar texto com gradiente:
+  Colocamos o gradiente no fundo e deixamos a letra invisível via a (alpha)
+  background-clip: text; Recorta o fundo exatamente no formato das letras*/
+}
+
+.CSS_Button .Button_Header{
+  background-image: linear-gradient(-45deg, var(--CSS-Blue) 0%, var(--CSS-Cyan));
+}
+.CSS_Button .Footer_Title{
+  background-image: linear-gradient(-45deg, var(--CSS-Blue) 0%, var(--CSS-Cyan));
+  background-clip: text;
+}
+
+
+.ButtonsGrid {
+  margin: 0 auto;   
+  padding: 5px 10px;
+
+  display: grid;
+  /* auto-fit faz os itens ocuparem 100% da largura disponível se não houver itens suficientes */
+  /* minmax(400px, 1fr) garante que eles tenham no mínimo 200px e cresçam igualmente */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+  gap: 10px;
+
+  min-width: 320px;
+  max-width: 1000px;
+  /* Mantemos o calc para limitar a grid a NO MÁXIMO 4 colunas (4 * 200px + gaps) */
+}
+
+.Button_Container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /*transition: SHORTHAND
+  - 1º: Tipo de animação
+  - 2º: Duração de animação (transition-duration)
+  - 3º: "Curva de velocidade" da animação (transition-timing-function)
+  --- Ease: Começa devagar, acelera no meio e desacelera no fim
+
+  , separa configurações igual text-shaodw, etc...
+  */
+
+  background-color: #050505;
+}
+.Button_Container a{
+  text-decoration: none;
+}
+.Button_Container:hover {
+  transform: translateY(-3px) translateX(-3px);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+}
+
+.Button_Header {
+  height: 180px;
+  position: relative;
+}
+.Header_Logo {
+    width: 100%;
+    height: 100%;
+}
+
+.Button_Overlays {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  font-size: 0.8em;
+}
+.Overlay_Title {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 6px 12px;
+  font-weight: 800;
+}
+.Overlay_Date {
+  background-color: #333;
+  color: #bbbbbb;
+  padding: 6px 12px;
+  font-weight: 500;
+  border-top-right-radius: 8px;
+}
+
+.Button_Footer {
+  background-color: #fff;
+  padding: 20px;
+}
+.Footer_Title h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+
+  color: rgba(0, 0, 0, 0);
+}
+.Footer_Description {
+  background-color: #000;
+  color: #ffffff;
+  padding: 12px 20px;
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  margin: 20px -20px -20px -20px; /* Margem negativa para colar nas bordas do card */
+}

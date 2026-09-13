@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> Formulário </title>
+		<link rel="stylesheet" type="text/css" href="../../styles_floating.css">
+    </head>
+    <body>
+        <div class="ignore-css">
+            <a href="../../index.html" title="Link para o Menu inicial">Formulários</a>
+        </div>
+		
+			<hr> <h1 align="center"> Cadastro de Funcionário </h1> <hr>
+
+		<form>
+			<!-- Comandos:
+
+			- Localizadores
+			name: PHP
+			id: CSS/JavaScript
+
+			- Atributos dos Campos
+			fieldset
+			lengend (Legenda do fieldset)
+			required
+			placeholder
+			checked (Múltipla escolha obrigatória, campo checked vem marcado)
+			readonly
+			selected
+			multiple
+			optgroup
+			option
+			minlenght/maxlenght (p/ type="text")
+			min/max (p/ type="number")
+			size (p/ <select>) ou
+			cols/rows (p/ textarea)
+			
+			- em type="file"
+			Vários tipos de arquivos:
+			accept="image/*" (p/ Todas as extensões) ou então accept=".png, .jpeg, ..." (p/ extensões específicas)
+			-->
+
+			<fieldset>
+				<legend><b>Dados Pessoais</b></legend>
+			<!-- Texto (type="text") -->
+			<label for="Nome">Nome:</label>
+			<input type="text"
+						name="Nome" 
+						id="Nome" 
+						size="50" 
+						minlength="5" 
+						maxlength="50" 
+						placeholder="Digite seu NOME COMPLETO"
+						required
+						tabindex="1">
+			<br><br>
+
+			<!-- Número (type="number") -->
+			<label for="Idade">Idade:</label>
+			<input type="number" 
+						name="Idade" 
+						id="Idade"  
+						min="15" 
+						max="60" 
+						required
+						tabindex="3">
+			<br><br>
+
+			<!-- Multipla Escolha (type="radio") -->
+			<label for="Sexo">Sexo:</label>
+			<input type="radio" 
+						name="Sexo" 
+						id="Sexo"
+						value="F"
+						checked
+						tabindex="2"> F
+			<input type="radio" 
+						name="Sexo" 
+						id="Sexo"
+						value="M"> M
+			<input type="radio" 
+						name="Sexo" 
+						id="Sexo"
+						value="Outro"> Outro
+			<br><br>
+
+			<!-- Data (type="date")-->
+			<label for="dataNascimento">Data de Nascimento</label> 
+			<input type="date"
+					name="dataNascimento"
+					id="dataNascimento"
+					required tabindex="4">
+			<br><br>
+
+					<!-- Arquivo (type="file")-->
+			<label for="Foto">Foto:</label> 
+			<input type="file"
+					name="Foto"
+					id="Foto"
+					accept=".png, .jpeg, .gif">
+
+			</fieldset>
+			
+			<fieldset>
+				<legend><b>Login</b></legend>
+
+			<label for="Login">Login:</label>
+			<input type="text"
+					id="Login"
+					name="Login"
+					minlength="5"
+					maxlength="25"
+					required
+					tabindex="6">
+			<br><br>
+
+			<!-- Senha (type="password")-->
+			<label for="Senha">Senha:</label>
+			<input type="password"
+					id="Senha"
+					name="Senha"
+					minlength="8"
+					required
+					tabindex="5">
+			</fieldset>
+
+			<fieldset>
+				<legend><b>Dados Profissionais</b></legend>
+
+			<label for="Cargo">Cargo:</label>
+			<input type="text"
+					id="Cargo"
+					name="Cargo"
+					value="Professor(a)"
+					readonly>
+			<br><br>
+			
+			<!-- (type="checkbox") -->
+			<label for="Manha">Período de Trabalho:</label>
+			
+			<br>
+			<input type="checkbox"
+					id="Manha"
+					name="Manha"
+					tabindex="7"> Manhã
+			<br>
+			<input type="checkbox"
+					id="Tarde"
+					name="Tarde"> Tarde
+			<br>
+				<input type="checkbox"
+					id="Noite"
+					name="Noite"> Noite
+			<br><br>
+
+			<!-- (type="color") -->
+			<label for="Cor">Cor da Camiseta:</label>
+			<input type="color"
+					id="Cor"
+					name="Cor"
+					value= #9B00FF>
+			<br><br>
+
+			<!-- (type="range") -->
+			<label for="Range"> Quanto você se sente preparado para a função </label>
+			<br>
+			0 <input type="range"
+					id="Range"
+					name="Range"
+					min="0"
+					max="100"
+					value="25"> 100
+			<br><br>
+
+			<!-- <select> [EM LISTA] </select> -->
+			<label for="Curso"> Curso:</label>
+			<br>
+			<select id="Curso" name="Curso">
+				<option></option>
+				<option value="ADM"> Administração </option>
+				<option value="AGR"> Agrimensura </option>
+				<option value="DES" selected> Desenvolvimento de Sistemas </option>
+				<option value="EDI"> Edificações </option>
+				<option value="ENF"> Enfermagem </option>
+				<option value="MEC"> Mecânica </option>
+				<option value="QUA"> Qualidade </option>
+				<option value="PRO"> Prótese Dentária </option>
+			</select>
+			<br><br>
+
+			<!-- <select> [LISTA ABERTA] </select> -->
+			<label for="Disciplina"> Disciplina Preferida:</label>
+			<br>
+			<select id="Disciplina " name="Disciplina" size="4" multiple>
+				<option value="BDA"> Banco de Dados </option>
+				<option value="DAW"> Desenvolvimento de Aplicações Web </option>
+				<option value="LPO" selected> Lógica de Programação </option>
+				<option value="PII"> Projeto Integrador 1 </option>
+			</select>
+			<br>
+			<small><i>Ctrl + click para seleção múltipla</i></small>
+			<br><br>
+
+			<!-- <select> [LISTA c/ GRUPO] </select> -->
+			<label for="Formação"> Formação:</label>
+			<br>
+			<select id="Formação " name="Formação">
+				<option></option>
+				<optgroup label="Graduação">
+				<option value="LIN"> Linguagens </option>
+				<option value="HUM"> Humanas </option>
+				<option value="EXA"> Exatas </option>
+				<option value="BIO"> Biológicas </option>
+				</optgroup>
+				<optgroup label="Pós-Graduação">
+				<option value="MES"> Mestrado </option>
+				<option value="DOU"> Doutorado </option>
+				</optgroup>
+			</select>
+			<br><br>
+
+			<label for="Conhecimentos"> Conhecimentos:</label>
+			<br>
+			<input id="Conhecimentos" name="Conhecimentos" list="Lista">
+			<br>
+			<datalist id="Lista">
+				<option value="CSS3">CSS3</option>
+				<option value="C#">C#</option>
+				<option value="C++">C++</option>
+				<option value="HTML5">HTML5</option>
+				<option value="HTML4">HTML4</option>
+				<option value="JavaScript">JavaScript</option>
+				<option value="Scratch">Scratch</option>
+				<option value="Python">Python</option>
+			</datalist>
+			</fieldset>
+
+			<fieldset>
+				<legend><b>Datas</b></legend>
+
+				<label for="DataLocal">Data e Hora do Cadastro:</label>
+				<br>
+				<input type="datetime-local" 
+						id="DataLocal" 
+						name="DataLocal">
+				<br><br>
+				
+				<label for="Tempo">Hora do Cadastro:</label>
+				<br>
+				<input type="time" 
+						id="Tempo" 
+						name="Tempo">
+				<br><br>
+
+				<label for="Mês">Mês de Férias:</label>
+				<br>
+				<input type="month" 
+						id="Mês" 
+						name="Mês">
+				<br><br>
+
+				<label for="Semana">Semana de Férias:</label>
+				<br>
+				<input type="week" 
+						id="Semana" 
+						name="Semana">
+				<br><br>
+			</fieldset>
+
+			<fieldset>
+				<legend><b>Contato</b></legend>
+
+				<!--(<textarea></textarea>) -->
+				<label for="Mensagem">Mensagem:</label>
+				<br>
+				<textarea 
+						id="Mensagem" 
+						name="Mensagem" 
+						rows="5" 
+						cols="50" 
+						maxlength="200">
+				</textarea>
+				<br><br>
+
+				<!--(type="email") -->
+				<label for="Email">Email:</label>
+				<br>
+				<input type="email" 
+						id="Email" 
+						name="Email"
+						placeholder="Ex: usuario@dominio.com"
+						required>
+				<br><br>
+
+				<!--(type="url") -->
+				<label for="Site">Site:</label>
+				<br>
+				<input type="url" 
+						id="Site" 
+						name="Site" 
+						placeholder="Ex: https://www.dominio.com"
+						required>
+				<br><br>
+
+				<!--(type="tel") -->
+				<label for="Telefone">Telefone:</label>
+				<br>
+				<input type="tel" 
+						id="Telefone" 
+						name="Telefone" 
+						placeholder="Ex: 11 98765-4321"
+						required>
+				<br><br>
+			</fieldset>
+
+			<br>
+				
+			<!-- Enviar (type="submit") -->
+			<input type="submit" 
+					value="Cadastrar"
+					tabindex="9"						>
+
+			<!-- Resetar (type="reset") -->
+			<input type="reset" 
+					value="Resetar">
+
+			<!-- Botão - JS (type="button") -->
+			<input type="button" 
+					value="A"
+					onclick="alert('a')">
+					
+			<br>
+
+		</form>
+
+	</body>
+</html>
